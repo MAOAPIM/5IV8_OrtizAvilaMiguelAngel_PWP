@@ -7,7 +7,7 @@
 }
 
 html, body{
-    background-color: brown;
+    background-color: rgb(160, 79, 79);
 }
 
 .main-conteiner{
@@ -21,15 +21,17 @@ nav, section, footer, aside, article{
     border: 40px solid rgb(233, 67, 197);
     margin: 1rem;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 5px;
+    text-align: justify;
 }
+
 article, aside{
-    width: 40%;
-    display: inline-block;
+    width: 20%;
+    display: inline-flex;
     height: 300px;
 }
 
 nav, footer, section{
     background-color: darkgray;
-    
+
 }
