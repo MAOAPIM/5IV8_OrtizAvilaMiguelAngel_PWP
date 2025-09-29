@@ -18,7 +18,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para el menú de navegación */
+
 .container-nav {
     background-color: #2b847e;
     color: white;
@@ -46,7 +46,7 @@ nav ul li a:hover {
     color: #3a62b8;
 }
 
-/* Estilos para el cuerpo del CV */
+
 .container-body {
     padding: 2rem;
     display: grid;
@@ -83,7 +83,7 @@ ul {
     margin-bottom: 1rem;
 }
 
-/* Estilos para el pie de página */
+
 .container-footer {
     background-color: #2c3e50;
     color: white;
