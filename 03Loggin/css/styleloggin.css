@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
 }
+
 body{
     background-image: url(../image/fondo.jpg);
     background-size: cover;
@@ -16,7 +17,7 @@ body{
     background-color: aliceblue;
     width: 700px;
     height: 40px;
-    border-radius: 10px solid rgb(155,244,16);
+    border-radius: 10px solid rgb(155, 244, 16);
     margin-top: 10%;
     text-align: center;
 }
@@ -50,6 +51,7 @@ body{
     margin-left: 20px;
 }
 
+
 .password{
     padding-top: 20px;
 }
@@ -62,13 +64,14 @@ body{
     padding-left: 5px;
 }
 
-.userid input{
+.password input{
     height: 25px;
     width: 300px;
     border: solid 2px #09c022;
     border-radius: 10px;
-    margin-left: 3px;
+    margin-left: 4px;
 }
+
 .button{
     margin-top: 20px;
     display: inline-flex;
@@ -79,16 +82,18 @@ body{
     width: 120px;
     height: 35px;
 }
+
 .button p{
-    margin: 8px;
+    margin-top: 8px;
     text-align: center;
     text-transform: uppercase;
-    font-family: "Roboto";
+    font-family: 'Roboto';
 }
 
 .button img{
- float: left;   
+    float: left;
 }
+
 a{
     margin-top: 20px;
     float: left;
