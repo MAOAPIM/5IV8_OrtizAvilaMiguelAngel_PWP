@@ -29,7 +29,7 @@ section {
 }
 
 .requisitos {
-    background: #f8f9fa;
+    background: #ffffff;
     padding: 15px;
     margin: 15px 0;
 }
@@ -42,11 +42,11 @@ table {
 th, td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #35a6c3;
 }
 
 th {
-    background: #ecf0f1;
+    background: #35a6c3;
 }
 
 a {
@@ -69,7 +69,7 @@ li {
 
 .container-footer {
     background-color: #936b39;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 2rem;
     text-align: center;
 }
