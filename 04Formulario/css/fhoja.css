@@ -87,3 +87,19 @@ input[type="email"]:focus {
     border-color: #35a6c3;
 }
 
+.container-footer {
+    background-color: #936b39;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.container-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.container-footer a:hover {
+    text-decoration: underline;
+}
