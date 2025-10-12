@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"  href="./../../Favicon.png" type="image/png">
+    <link rel="stylesheet" href="./../CSS/Estilo_1.css">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <div class="container">
+
+        <form action="" method="post" name="formulario"> 
+            <label for=""><h1>Formulario para calculo de inversiones Banco Kawaii con un incremento del 8.05% anual</h1></label>
+            <br>
+            <div class="container-table">
+                <table class="table">
+
+                    <tr>
+                        <td class="td-text">
+                            Introduce la cantidad que deseas invertir por todo un año
+                        </td>
+                        <td>
+                            <input type="text" name="cantidad" id="cantidadi" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+                            <input type="button" value="Calcular interes" name="enviar" onclick="interes()" class="boton">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-text">
+                            Su saldo total con el interes es de:
+                        </td>
+                        <td>
+                            <input type="text" name="sueldoi" id="saldoi" readonly="readonly" class="input_text">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Borrar datos" name="borrar" onclick="borrari()" class="boton">
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </form>
+    </div>
+    <script src="./../js/Ejercicio1.js"></script>
+
+<footer>    
+    <div class="container-footer">
+        <a href="./../indexP.html">Regrsar al indice de los Ejercicios </a>
+        <p>&copy; 2025 Ortiz Avila Miguel Angel. //  P.I.M (Propiedad Intelectual de Miguel Ortiz).</p>
+     </div>
+</footer>
+
+</body>
+</html>

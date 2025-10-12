@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../CSS/Estilo_3.css">
+    <link rel="icon" href="./../../Favicon.png">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+
+    <form method="post" name="formulario">
+        
+        <div class="container-title">
+            <h1>Calcular descuento de su compra</h1>
+        </div>
+
+        <table>
+
+            <tr>
+                <td>
+                    <label for="">Ingrese el total de su compra</label>
+                </td>
+                <td>
+                    <input type="text" id="compra" placeholder="$ 2000" class="input-form" onkeypress="return validarEntrada(event)">
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="button" id="calcular" value="Calcular precio a pagar" class="button" onclick="calcularDescuento()"></td>
+            </tr>
+
+            <tr>
+                <td>Total a pagar</td>
+                <td><input type="text" id="total" readonly class="input-form"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="button" value="Limpiar" id="limpiar" class="button" onclick="limpiarCampos()"></td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <script src="./../js/Ejercicio3.js"></script>
+
+<footer>    
+    <div class="container-footer">
+        <a href="./../indexP.html">Regrsar al indice de los Ejercicios </a>
+        <p>&copy; 2025 Ortiz Avila Miguel Angel. //  P.I.M (Propiedad Intelectual de Miguel Ortiz).</p>
+     </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="icon"  href="./../../Favicon.png" type="image/png">
+    <link rel="stylesheet" href="./../CSS/Estilo_2.css">
+</head>
+<body>
+
+    <form method="post" name="formulario">
+
+        <div class="container-title">
+            <h1>
+                Calculo de Comsiones
+            </h1>
+        </div>
+
+        <div class="sueldo-ventas">
+
+            <div class="input-sueldo">
+                <label for="sueldo">Ingrese su sueldo base</label>
+                <input type="text" placeholder="$ 7000" id="sueldo" onkeypress="return validarTeclado(event)">
+            </div>
+
+            <div class="input-ventas-container">
+
+                <div class="input-ventas">
+                    <label for="venta1">Ingrese el monto de la venta 1</label>
+                    <input type="text" placeholder="$ 800" id="venta1" onkeypress="return validarTeclado(event)">
+                </div>
+
+                <div class="input-ventas">
+                    <label for="venta2">Ingrese el monto de la venta 2</label>
+                    <input type="text" placeholder="$ 800" id="venta2" onkeypress="return validarTeclado(event)">
+                </div>
+
+                <div class="input-ventas">
+                    <label for="venta3">Ingrese el monto de la venta 3</label>
+                    <input type="text" placeholder="$ 800" id="venta3" onkeypress="return validarTeclado(event)">
+                </div>
+
+            </div>
+
+            <div class="button-container">
+                <input type="button" class="boton" id="calcular" value="Calcular" onclick="calcularComisiones()">
+            </div>
+
+        </div>
+
+        <div class="comisiones-total">
+
+            <div class="comisiones-container">
+                <label for="comisiones">Comsiones por ventas</label>
+                <input type="text" id="comisiones" readonly>
+            </div>
+
+            <div class="total-container">
+                <label for="total">Total</label>
+                <input type="text" id="total" readonly>
+            </div>
+
+        </div>
+
+    </form>
+
+    <script src="./../js/Ejercicio2.js"></script>
+
+<footer>    
+    <div class="container-footer">
+        <a href="./../indexP.html">Regrsar al indice de los Ejercicios </a>
+        <p>&copy; 2025 Ortiz Avila Miguel Angel. //  P.I.M (Propiedad Intelectual de Miguel Ortiz).</p>
+     </div>
+</footer>
+
+</body>
+</html>
