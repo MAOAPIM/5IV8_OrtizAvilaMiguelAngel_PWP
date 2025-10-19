@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejericio 1</title>
+    <link rel="icon" href="./../../Favicon.png" type="image/png">
+    <link rel="stylesheet" href="./../css/estilo_Generico.css">
+</head>
+
+<body>
+
+    <form method="post">
+
+        <div class="title-container">
+            <h1>Ejercicio 1</h1>
+        </div>
+
+        <div class="input-container">
+
+            <div class="campo">
+                <label>Ingrese el 1° numero</label>
+                <input type="text" id="num1" onkeypress="return validarTeclado(event)">
+            </div>
+
+            <div class="campo">
+                <label>Ingrese el 2° numero</label>
+                <input type="text" id="num2" onkeypress="return validarTeclado(event)">
+            </div>
+
+            <div class="button">
+                <input type="button" onclick="calcularResultado()" value="Ejecutar proceso">
+                <input type="button" onclick="borrar()" value="Eliminar datos">
+            </div>
+
+        </div>
+
+        <div class="result-container">
+
+            <div class="result">
+                <label>Resultado</label>
+                <input type="text" readonly id="resultado">
+            </div>
+
+        </div>
+
+    </form>
+
+    <script src="./../JS/e1.js"></script>
+
+
+    <footer>
+        <div class="container-footer">
+            <a href="./../IndexE2.html">Regrsar al indice de los Ejercicios (2) </a>
+            <p>&copy; 2025 Ortiz Avila Miguel Angel. // P.I.M (Propiedad Intelectual de Miguel Ortiz).</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

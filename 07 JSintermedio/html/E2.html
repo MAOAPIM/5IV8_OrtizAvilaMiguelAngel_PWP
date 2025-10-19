@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="icon" href="./../../Favicon.png" type="image/png">
+    <link rel="stylesheet" href="./../css/estilo_Generico.css">
+</head>
+
+<body>
+    <form method="post">
+
+        <div class="title-container">
+            <h1>Número mayor</h1>
+        </div>
+
+        <div class="input-container">
+
+            <div class="campo">
+                <label>Ingrese el 1°:</label>
+                <input type="text" onkeypress="return validarTeclado(event)" id="num1">
+            </div>
+
+            <div class="campo">
+                <label>Ingrese el 2°:</label>
+                <input type="text" onkeypress="return validarTeclado(event)" id="num2">
+            </div>
+
+            <div class="campo">
+                <label>Ingrese el 3°:</label>
+                <input type="text" onkeypress="return validarTeclado(event)" id="num3">
+            </div>
+
+            <div class="button">
+                <input type="button" onclick="calcularMayor()" value="Ejecutar proceso">
+                <input type="button" onclick="borrar()" value="Eliminar datos">
+            </div>
+        </div>
+        <div class="result-container">
+
+            <div class="result">
+                <label>Resultado</label>
+                <input type="text" readonly id="resultado">
+            </div>
+
+        </div>
+
+    </form>
+
+    <script src="./../JS/e2.js"></script>
+
+    <footer>
+        <div class="container-footer">
+            <a href="./../IndexE2.html">Regrsar al indice de los Ejercicios (2) </a>
+            <p>&copy; 2025 Ortiz Avila Miguel Angel. // P.I.M (Propiedad Intelectual de Miguel Ortiz).</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

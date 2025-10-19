@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 </title>
+    <link rel="icon" href="./../../Favicon.png" type="image/png">
+    <link rel="stylesheet" href="./../css/estilo_Generico.css">
+</head>
+
+<body>
+
+    <form method="post">
+
+        <div class="title-container">
+            <h1>Calculo de pago del trabajador (esclavo moderno)</h1>
+        </div>
+
+        <div class="input-container">
+
+            <div class="campo">
+                <label>Ingrese las horas trabajadas en esta semana: </label>
+                <input type="text" id="horas" onkeypress="return validarTeclado(event)">
+            </div>
+
+            <div class="campo">
+                <label>Ingrese el pago que recibe por hora: </label>
+                <input type="text" id="pagoPorHora" onkeypress="return validarTecladoPago(event)">
+            </div>
+
+            <div class="button">
+                <input type="button" onclick="calcularSueldo()" value="Ejecutar proceso">
+                <input type="button" onclick="borrar()" value="Eliminar datos">
+            </div>
+
+        </div>
+
+        <div class="result-container">
+
+            <div class="result">
+                <label>Sueldo corespondiente: </label>
+                <input type="text" readonly id="sueldo">
+            </div>
+
+        </div>
+
+    </form>
+
+    <script src="./../JS/e3.js"></script>
+
+    <footer>
+        <div class="container-footer">
+            <a href="./../IndexE2.html">Regrsar al indice de los Ejercicios (2) </a>
+            <p>&copy; 2025 Ortiz Avila Miguel Angel. // P.I.M (Propiedad Intelectual de Miguel Ortiz).</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
