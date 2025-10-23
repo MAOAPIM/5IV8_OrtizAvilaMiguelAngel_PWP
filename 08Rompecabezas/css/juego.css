@@ -1,5 +1,3 @@
-/*Código armado por La Foca Loca S.A. No modificar*/
-
 body {
     font-family: Arial, sans-serif;
     width: 940px;
@@ -176,4 +174,26 @@ li::before {
     background-image: -o-linear-gradient(top, #2079b0, #eb94d0);
     background-image: linear-gradient(to bottom, #2079b0, #eb94d0);
     text-decoration: none;
+}
+
+.container-back {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.container-back a {
+    text-decoration: none;
+    color: #00332B;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background: #B5E3DB;
+    border-radius: 5px;
+    border: 1px solid #00332B;
+    transition: all 0.3s;
+}
+
+.container-back a:hover {
+    background: #9bd1c7;
+    transform: translateY(-2px);
 }
