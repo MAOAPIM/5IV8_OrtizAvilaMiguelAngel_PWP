@@ -47,7 +47,6 @@ const httpCatsApi = () => {
         buttons.all.forEach(button => button.disabled = false);
     };
 
-    // Los 20 códigos HTTP más comunes/relevantes
     const getAllStatusCodes = async () => {
         const statusCodes = [
             { 
@@ -266,7 +265,6 @@ const httpCatsApi = () => {
             return;
         }
 
-        // Usar directamente la URL de la imagen sin fetch - ESTA ES LA SOLUCIÓN
         const imageUrl = `${apiUrl}/${status.code}`;
         
         // Crear imagen y manejar errores de carga
@@ -346,7 +344,6 @@ const httpCatsApi = () => {
         
         setLoadingComplete();
 
-        // Eventos
         buttons.search.onclick = () => searchStatusCode(statusInput.value);
         
         statusInput.onkeyup = (event) => {
