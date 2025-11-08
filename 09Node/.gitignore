@@ -1,0 +1,21 @@
+# Directorio de dependencias
+node_modules/
+
+# Variables de entorno
+.env
+.env.local
+
+# Archvos de compilación
+build/
+dist/
+
+# Archivos de registro
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Aechivos de sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
