@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Registro - Bitácora correctiva</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Editar Registro</h1>
+
+        <div class="form-container">
+            <form action="/editar/<%= registro.id %>" method="POST">
+                <div class="form-group">
+                    <label>ID de Equipo Afectado</label>
+                    <input type="text" name="id_equipo_afectado" value="<%= registro.id_equipo_afectado %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Fecha y Hora del Reporte</label>
+                    <input type="datetime-local" name="fecha_hora_reporte" value="<%= registro.fecha_formateada %>"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label>Síntoma/Fallo Reportado</label>
+                    <textarea name="sintoma_fallo" required><%= registro.sintoma_fallo %></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Diagnóstico del Técnico</label>
+                    <textarea name="diagnostico_tecnico"><%= registro.diagnostico_tecnico || '' %></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Acción Correctiva</label>
+                    <textarea name="accion_correctiva"><%= registro.accion_correctiva || '' %></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Piezas Reemplazadas</label>
+                    <p class="note">Nota: Ingrese las piezas separadas por comas</p>
+                    <textarea name="piezas_reemplazadas"><%= registro.piezas_reemplazadas || '' %></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Tiempo de Inactividad</label>
+                    <input type="text" name="tiempo_inactividad" value="<%= registro.tiempo_inactividad || '' %>"
+                        placeholder="ej: 3 horas y 15 minutos">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                    <a href="/" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

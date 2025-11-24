@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora correctiva</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bitácora Correctiva</h1>
+        <div class="tabla-registros">
+            <button class="btn-primary" onclick="abrirModal()">Crear Nuevo Registro</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Equipo</th>
+                        <th>Fecha y Hora Reporte</th>
+                        <th>Síntoma Reportado</th>
+                        <th>Diagnóstico</th>
+                        <th>Acción Correctiva</th>
+                        <th>Piezas Reemplazadas</th>
+                        <th>Tiempo Inactividad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (registros.length===0) { %>
+                        <tr>
+                            <td colspan="8" class="no-data">No hay registros</td>
+                        </tr>
+                        <% } %>
+
+                            <% registros.forEach(function(registro) { %>
+                                <tr>
+                                    <td>
+                                        <%= registro.id_equipo_afectado %>
+                                    </td>
+                                    <td>
+                                        <%= new Date(registro.fecha_hora_reporte).toLocaleString() %>
+                                    </td>
+                                    <td>
+                                        <%= registro.sintoma_fallo %>
+                                    </td>
+                                    <td>
+                                        <%= registro.diagnostico_tecnico || 'N/A' %>
+                                    </td>
+                                    <td>
+                                        <%= registro.accion_correctiva || 'N/A' %>
+                                    </td>
+                                    <td>
+                                        <%= registro.piezas_reemplazadas || 'N/A' %>
+                                    </td>
+                                    <td>
+                                        <%= registro.tiempo_inactividad || 'N/A' %>
+                                    </td>
+                                    <td class="actions">
+                                        <a href="/editar/<%= registro.id %>" class="btn-edit">Editar</a>
+                                        <form action="/eliminar/<%= registro.id %>" method="POST"
+                                            style="display: inline;">
+                                            <button type="submit" class="btn-delete"
+                                                onclick="return confirm('¿Estás seguro?')">Eliminar</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                </tbody>
+            </table>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="cerrarModal()">&times;</span>
+
+                <h3>Crear Nuevo Registro</h3>
+                <form action="/agregar" method="POST">
+                    <div class="form-group">
+                        <label>ID de Equipo Afectado</label>
+                        <input type="text" name="id_equipo_afectado" required placeholder="Ingrese el ID del equipo">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fecha y Hora del Reporte</label>
+                        <input type="datetime-local" name="fecha_hora_reporte" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Síntoma/Fallo Reportado</label>
+                        <textarea name="sintoma_fallo" required placeholder="Describa el síntoma o fallo"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Diagnóstico del Técnico</label>
+                        <textarea name="diagnostico_tecnico" placeholder="Ingrese el diagnóstico"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Acción Correctiva</label>
+                        <textarea name="accion_correctiva" placeholder="Describa la acción correctiva"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Piezas Reemplazadas</label>
+                        <p class="note">Nota: Ingrese las piezas separadas por comas</p>
+                        <textarea name="piezas_reemplazadas" placeholder="Ingrese las piezas reemplazadas"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tiempo de Inactividad</label>
+                        <input type="text" name="tiempo_inactividad" placeholder="ej: 3 horas y 15 minutos">
+                    </div>
+
+                    <!-- Acciones del modal -->
+                    <div class="modal-actions">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-secondary" onclick="cerrarModal()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abrirModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'flex';
+            void modal.offsetWidth;
+            modal.classList.add('show');
+            const firstInput = modal.querySelector('input');
+            if (firstInput) firstInput.focus();
+        }
+
+        function cerrarModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 200);
+        }
+
+        document.getElementById('modal').addEventListener('click', function (event) {
+            if (event.target === this) {
+                cerrarModal();
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('modal');
+                if (modal && modal.classList.contains('show')) {
+                    cerrarModal();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
